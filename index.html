@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Países</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <!-- Encabezado -->
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-dark">Explorador Global</h1>
+            <p class="text-muted">Descubre información detallada sobre cualquier país.</p>
+        </header>
+
+        <!-- Panel de Filtros -->
+        <div class="row g-3 mb-4 bg-white p-4 rounded-4 shadow-sm border border-light">
+            <div class="col-md-4">
+                <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Buscar país (ej. Perú)...">
+            </div>
+            <div class="col-md-4">
+                <select id="regionFilter" class="form-select form-select-lg">
+                    <option value="all">Todos los continentes</option>
+                    <option value="Africa">África</option>
+                    <option value="Americas">América</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europa</option>
+                    <option value="Oceania">Oceanía</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="langFilter" class="form-select form-select-lg">
+                    <option value="all">Todos los idiomas</option>
+                    <option value="spa">Español</option>
+                    <option value="eng">Inglés</option>
+                    <option value="fra">Francés</option>
+                    <option value="por">Portugués</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Estado de Carga -->
+        <div id="loading" class="text-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+
+        <!-- Contenedor de Tarjetas -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="countriesGrid">
+            <!-- Las tarjetas se renderizarán aquí mediante JS -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
