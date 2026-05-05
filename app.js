@@ -1,5 +1,6 @@
-const API_URL = 'https://restcountries.com/v3.1/all';
-let allCountries = []; // Aquí almacenaremos la data original
+// Nueva URL con los campos específicos que usamos en el proyecto
+const API_URL = 'https://restcountries.com/v3.1/all?fields=name,flags,capital,population,languages,currencies,region';
+let allCountries = []; 
 
 // Referencias del DOM
 const grid = document.getElementById('countriesGrid');
